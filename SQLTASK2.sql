@@ -70,6 +70,10 @@ SELECT Products.Name,Products.ID,COUNT(Orders.ID) AS total_orders FROM Products
 LEFT JOIN Orders ON Products.ID=Orders.productId
 GROUP BY Products.ID,Products.Name
 
+SELECT Products.Name,COUNT(Orders.ORDERID) AS total_orders FROM Products
+LEFT JOIN Orders ON Products.ID=Orders.productId
+GROUP BY Products.ID,Products.Name
+
 SELECT Products.Name,Products.ID,COUNT(Orders.ID) AS total_orders FROM Products
 LEFT JOIN Orders ON Products.ID=Orders.productId
 GROUP BY Products.ID,Products.Name
@@ -96,14 +100,14 @@ UPDATE Products
 SET PRICE=(200-(200*10/100))
 WHERE NAME='PEN';
 
-update  O 
+updateÂ Â O 
 set o.AMOUNT=O.Amount-(0.1*O.AMOUNT)
 from Products P
-Join Orders O on P.id=O.ProductId Where  QTY>=2
+Join Orders O on P.id=O.ProductId WhereÂ Â QTY>=2
 
 
 select * from Products P
-Join Orders O on P.id=O.ProductId Where  QTY>=2
+Join Orders O on P.id=O.ProductId WhereÂ Â QTY>=2
 
 DELETE CUSTOMERS WHERE NAME='SAI';
 
